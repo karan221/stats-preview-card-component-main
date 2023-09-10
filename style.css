@@ -56,4 +56,53 @@ main .container .card__image {
   width: 100%;
   padding-top: 73.3944954128%;
   box-shadow: inset 0 0 0 1000px hsla(277, 80%, 24%, 0.7);
+}
+
+@media (min-width: 40rem) {
+  html, body {
+    width: -moz-min-content;
+    width: min-content;
+    height: 100%;
+  }
+  main {
+    width: 100%;
+    min-height: 100%;
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+  main .container {
+    width: 100%;
+    min-width: 60rem;
+    max-width: min(65rem, 95%);
+    border-radius: 7.5px;
+  }
+  main .card {
+    display: grid;
+    grid-auto-rows: min-content;
+    grid-auto-columns: min-content;
+    grid-template-areas: "content image";
+    grid-template-columns: 1fr 1fr;
+  }
+  main .card .card__image {
+    grid-area: image;
+    background: url("images/image-header-desktop.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-top: 82.5925925926%;
+    width: 100%;
+  }
+  main .card .card__content {
+    grid-area: content;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    justify-content: space-between;
+    margin: clamp(0.1rem, 10%, 2rem);
+  }
+  main .card .card__content .card__stats {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
 }/*# sourceMappingURL=style.css.map */
