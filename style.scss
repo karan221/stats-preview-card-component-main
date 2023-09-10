@@ -9,8 +9,9 @@ h1, h2, h3, h4, h5, h6, body, ul, ol, dl {
 }
 
 html, body {
-  width: 100svw;
-  height: 100svh;
+  width: fit-content;
+  min-width: 100svw;
+  min-height: 100svh;
   font-family: 'Inter', sans-serif;
   font-size: 15px;
   background-color: hsl(233, 47%, 7%);
@@ -18,15 +19,17 @@ html, body {
 }
 
 main {
-  padding: 2rem 0;
+  min-width: min-content;
+  padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-
   .container {
-    width: 90%;
+    width: 93%;
+    min-width: 20rem;
+    max-width: 30rem;
     border-radius: 10px;
     overflow: hidden;
     background-color: hsl(244, 38%, 16%);
@@ -58,5 +61,4 @@ main {
     }
 
   }
-
 }
